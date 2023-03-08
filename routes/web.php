@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\IncidenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::resource('incidences', IncidenceController::class);
+Route::resource('bookings', BookingController::class);
