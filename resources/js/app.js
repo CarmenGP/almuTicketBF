@@ -9,6 +9,6 @@ window.app = createApp({
         };
     },
     components: {
-        Almuticket 
+        AlmuTicket 
     },
 }).mount('#app');
